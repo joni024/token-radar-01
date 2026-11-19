@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Radar: pre-token protocols ranked by implied value</title>
+<meta name="description" content="A radar for crypto token launches: pre-token protocols ranked by an implied value derived from the snapshot's own figures, each with a farm plan.">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#board">Skip to the board</a>
+<header class="top">
+  <div class="brand"><span class="mark" aria-hidden="true"></span><span class="brand-name">Token Radar</span></div>
+  <div class="top-meta"><span id="meta-asof"></span><span>DefiLlama protocol index</span><span id="meta-model"></span></div>
+</header>
+<main id="board" tabindex="-1">
+  <section class="lede">
+    <div>
+      <h1 id="lede-title">Pre-token protocols, ranked by implied value</h1>
+      <p id="lede-sub">The watchlist is the floor: every protocol with at least $50M of TVL and no token on record. The early radar adds every other pre-token protocol that could plausibly launch one. Implied value is a model, not a promise.</p>
+    </div>
+    <div class="facts" id="facts"></div>
+  </section>
+  <div class="controls">
+    <div class="field"><label for="q">Search</label><input type="search" id="q" placeholder="Search name or chain" aria-label="Search the board"></div>
+    <div class="field"><label for="chain">Chain</label><select id="chain" aria-label="Filter by chain"></select></div>
+    <div class="field"><label for="category">Category</label><select id="category" aria-label="Filter by category"></select></div>
+    <div class="field"><label for="status">Board</label><select id="status" aria-label="Filter the board">
+      <option value="all">All pre-token rows</option>
+      <option value="watchlist">Watchlist only</option>
+      <option value="early">Early rows only</option>
+      <option value="rising">Rising fast</option>
+    </select></div>
+    <div class="field"><span class="sub">View</span><div class="tabs" role="tablist" aria-label="Views">
+      <button type="button" id="tab-board" role="tab" aria-selected="true">Board</button>
+      <button type="button" id="tab-live" role="tab" aria-selected="false">Live token</button>
+      <button type="button" id="tab-setaside" role="tab" aria-selected="false">Set aside</button>
+      <button type="button" id="tab-method" role="tab" aria-selected="false">Method</button>
+    </div></div>
+    <span class="count" id="count"></span>
+  </div>
+  <div id="view"></div>
+  <footer class="foot">
+    <p>Built for make.fun's token-radar-01 bounty. Data: a sealed DefiLlama protocol snapshot; every implied value is this radar's own estimate from that snapshot, never make.fun's. A protocol is shown as recording no token, never as having none: the record is not proof.</p>
+  </footer>
+</main>
+<dialog class="detail" id="detail" aria-labelledby="detail-title"></dialog>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
